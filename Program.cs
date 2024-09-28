@@ -1,7 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using TrilhaNetAzureDesafio.Context;
+using DotNetEnv;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Carregando variáveis de ambiente do arquivo .env
+Env.Load();
 
 // Add services to the container.
 builder.Services.AddDbContext<RHContext>(options =>
